@@ -410,8 +410,15 @@ header .btn-group {
   box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);
   transition: 0.25s ease;
 }
+.who {
+  background: var(--background-primary);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);
+  transition: 0.25s ease;
+}
 
-.blog-card:hover {
+.blog-card:hover,.who:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.1);
 }
@@ -434,7 +441,7 @@ header .btn-group {
   color: var(--action-secondary);
 }
 
-.blog-card .h3 {
+.blog-card .h3 ,.who .h3{
   line-height: 1.4;
   margin-bottom: 1rem;
 }
@@ -671,6 +678,7 @@ footer .wrapper { text-align: center; }
     overflow: hidden;
     margin-bottom: 1rem;
   }
+ 
 
   .blog .wrapper-flex {
     display:         flex;
