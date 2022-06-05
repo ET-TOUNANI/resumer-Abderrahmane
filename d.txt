@@ -1,0 +1,28 @@
+function [x]=jacobi(A,b,n,Eps,MaxIter)
+x=zeros(n);
+for iter=1:MaxIter
+    for i=1:n
+        s=0;
+     for j=1 :n
+         if(i~=j)
+          s=s-A(i,j)*x(j);
+         end
+     end
+     x2(i)=(b(i)+s)/A(i,j);
+    end
+     nor = norm(x2-x);
+     if(nor <= Eps)
+         x=x2;
+         break
+     else
+         x=x2;
+     end
+end
+
+//////////////////////////////////////////////////////////
+
+A=[1 2 3  6 ; 4 3 2 3 ; 9 9 1 2 ; 4 2 2 1];
+b=[1 2 1 4];
+x=jacobi(A,b,4,0.00001,20);
+disp(x);
+plot(x);
